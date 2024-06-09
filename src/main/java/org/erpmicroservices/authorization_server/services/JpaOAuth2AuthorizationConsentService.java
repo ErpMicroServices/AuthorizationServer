@@ -1,9 +1,11 @@
-package org.erpmicroservices.authorization_server;
+package org.erpmicroservices.authorization_server.services;
 
 import java.util.HashSet;
 import java.util.Set;
 
 
+import org.erpmicroservices.authorization_server.models.AuthorizationConsent;
+import org.erpmicroservices.authorization_server.repositories.AuthorizationConsentRepository;
 import org.springframework.dao.DataRetrievalFailureException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

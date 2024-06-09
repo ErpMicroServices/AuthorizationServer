@@ -1,5 +1,6 @@
-package org.erpmicroservices.authorization_server;
+package org.erpmicroservices.authorization_server.repositories;
 
+import org.erpmicroservices.authorization_server.models.Authorization;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

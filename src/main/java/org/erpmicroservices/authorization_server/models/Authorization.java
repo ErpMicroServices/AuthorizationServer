@@ -1,4 +1,4 @@
-package org.erpmicroservices.authorization_server;
+package org.erpmicroservices.authorization_server.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

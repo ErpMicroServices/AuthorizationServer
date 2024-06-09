@@ -1,4 +1,4 @@
-package org.erpmicroservices.authorization_server;
+package org.erpmicroservices.authorization_server.services;
 
 import java.time.Instant;
 import java.util.List;
@@ -10,6 +10,8 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.Module;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import org.erpmicroservices.authorization_server.models.Authorization;
+import org.erpmicroservices.authorization_server.repositories.AuthorizationRepository;
 import org.springframework.dao.DataRetrievalFailureException;
 import org.springframework.security.jackson2.SecurityJackson2Modules;
 import org.springframework.security.oauth2.core.AuthorizationGrantType;
