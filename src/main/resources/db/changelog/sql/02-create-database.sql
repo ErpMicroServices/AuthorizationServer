@@ -62,3 +62,26 @@ CREATE TABLE authorization_Consent
     authorities          varchar(1000) NOT NULL,
     PRIMARY KEY (registered_Client_Id, principal_Name)
 );
+
+CREATE TABLE "user"
+(
+    id                      UUID                 NOT NULL,
+    username                varchar(255)         NOT NULL UNIQUE,
+    password                varchar(255)         NOT NULL,
+    account_non_expired     boolean DEFAULT TRUE NOT NULl,
+    account_non_locked      boolean DEFAULT TRUE NOT NULL,
+    credentials_non_expired boolean DEFAULT TRUE NOT NULL,
+    provider                varchar(255),
+    provider_id             varchar(255),
+    enabled                 boolean DEFAULT TRUE NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE authority
+(
+    id        UUID         NOT NULL,
+    user_id   UUID         NOT NULL,
+    authority varchar(255) NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEy (user_id) REFERENCES "user"
+);

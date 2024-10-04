@@ -15,37 +15,37 @@ spring:
       hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/people_and_organizations
-    username: people_and_organizations
-    password: people_and_organizations
+    url: jdbc:postgresql://localhost:5432/authorization_service
+    username: authorization_service
+    password: authorization_service
 
   liquibase:
     change-log: classpath:/db/changelog/db.changelog-master.yml
 
-security:
-  user:
-    name: user
-    password: password
-  oauth2:
-    authorizationserver:
-      client:
-        oidc-client:
-          registration:
-            client-id: "oidc-client"
-            client-secret: "{noop}secret"
-            client-authentication-methods:
-              - "client_secret_basic"
-            authorization-grant-types:
-              - "authorization_code"
-              - "refresh_token"
-            redirect-uris:
-              - "http://127.0.0.1:8080/login/oauth2/code/oidc-client"
-            post-logout-redirect-uris:
-              - "http://127.0.0.1:8080/"
-            scopes:
-              - "openid"
-              - "profile"
-          require-authorization-consent: true
+#security:
+#  user:
+#    name: user
+#    password: password
+#  oauth2:
+#    authorizationserver:
+#      client:
+#        oidc-client:
+#          registration:
+#            client-id: "oidc-client"
+#            client-secret: "{noop}secret"
+#            client-authentication-methods:
+#              - "client_secret_basic"
+#            authorization-grant-types:
+#              - "authorization_code"
+#              - "refresh_token"
+#            redirect-uris:
+#              - "http://127.0.0.1:8080/login/oauth2/code/oidc-client"
+#            post-logout-redirect-uris:
+#              - "http://127.0.0.1:8080/"
+#            scopes:
+#              - "openid"
+#              - "profile"
+#          require-authorization-consent: true
 management:
   endpoints:
     web:
