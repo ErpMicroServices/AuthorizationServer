@@ -12,5 +12,6 @@ databaseChangeLog:
         - sqlFile:
             path: db/changelog/sql/02-create-database.sql
         - sqlFile:
-            path: db/changelog/sql//03-initial-data.sql
+            path: db/changelog/sql/03-initial-data.sql
+            splitStatements: false
 
