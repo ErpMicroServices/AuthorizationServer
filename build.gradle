@@ -47,8 +47,8 @@ tasks.named('test') {
 }
 
 tasks.named("bootBuildImage") {
-    imageName = "erpmicroservices.org/${project.name}"
-    tags = ["erpmicroservices.org/${project.name}:latest", "erpmicroservices.org/${project.name}:${version}"]
+    imageName = "erpmicroservices/${project.name}"
+    tags = ["erpmicroservices/${project.name}:latest", "erpmicroservices/${project.name}:${version}"]
     createdDate = "now"
     environment = ['BPE_SPRING_PROFILES_ACTIVE': 'docker']
 }
