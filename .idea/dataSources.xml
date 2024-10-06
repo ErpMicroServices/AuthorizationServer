@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="authorization_service@localhost" uuid="1be79077-5068-48bc-9646-8f6e07fe2e2d">
+    <data-source source="LOCAL" name="authorization_service-db@localhost" uuid="1be79077-5068-48bc-9646-8f6e07fe2e2d">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/authorization_service</jdbc-url>
+      <jdbc-url>jdbc:postgresql://localhost:5432/authorization_service-db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
     <data-source source="LOCAL" name="people_and_organizations@localhost" uuid="e503a164-8843-4280-9599-41a73e241408">

@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '3.3.0'
+    id 'org.springframework.boot' version '3.3.4'
     id 'io.spring.dependency-management' version '1.1.5'
 }
 
@@ -31,7 +31,6 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-authorization-server'
-    implementation 'org.liquibase:liquibase-core'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
@@ -45,4 +44,11 @@ dependencies {
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+tasks.named("bootBuildImage") {
+    imageName = "erpmicroservices.org/${project.name}"
+    tags = ["erpmicroservices.org/${project.name}:latest", "erpmicroservices.org/${project.name}:${version}"]
+    createdDate = "now"
+    environment = ['BPE_SPRING_PROFILES_ACTIVE': 'docker']
 }
